@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Regex101 Clone</title>
+
+        <style>
+            body {
+                background-color: black;
+            }
+            
+            #wrap {
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                margin-top: -200px;
+                margin-left: -250px;
+                border: 8px solid rgb(228, 167, 35);
+                background: rgb(236, 74, 10);
+                width: 500px;
+                height: 400px;
+                text-align:center;
+            }
+            button{
+                color: rgb(255, 255, 255);
+                background: rgb(0, 0, 0);
+                font-style:bold;
+                font-size:large;
+            }
+            h1{
+                font-style:bold;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="wrap" >
+
+            <h1>Welcome to Regex101 Clone demo.</h1>
+
+            <form action='' method="post">
+                <label>Regular Expression: </label>
+                <input type="text" name="in_re" placeholder="Enter Regex Pattern here"> <br><br>
+                <label>String to be tested: </label>
+                <input type="text" name="in_str" placeholder="Enter your Test String here"> <br><br>
+                <button>SUBMIT</button>
+            </form>
+
+            {% if b %}
+            <h3>Match Found!</h3>
+            <h4>Regix Pattern Entered: {{ c }} <br><br>
+                Text String Entered: {{ n }} <br><br>
+                Total Matches Found: {{ a }} <br><br>
+                Matched: {{ b }}
+            </h4>            
+            {% else %}
+                <h3>No Match Found!</h3>
+                <h4>Regix Pattern Entered: {{ c }} <br><br>
+                    Text String Entered: {{ n }}
+                </h4>
+            {% endif %}
+
+        </div>    
+    </body>
+</html>
