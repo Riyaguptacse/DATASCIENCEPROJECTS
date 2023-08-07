@@ -1,1 +1,1 @@
-# internship_datascience_2022
+DataScience Projects
